@@ -226,62 +226,133 @@
 
         <div class="content">
             <div class="highlight">
-                <p class="lang-en"><strong>Effective Date:</strong> March 17, 2026</p>
-                <p class="lang-en"><strong>Last Updated:</strong> March 17, 2026</p>
-                <p class="lang-zh"><strong>生效日期：</strong>2026年3月17日</p>
-                <p class="lang-zh"><strong>最后更新：</strong>2026年3月17日</p>
+                <p class="lang-en"><strong>Effective Date:</strong> June 5, 2026</p>
+                <p class="lang-en"><strong>Last Updated:</strong> June 5, 2026</p>
+                <p class="lang-zh"><strong>生效日期：</strong>2026年6月5日</p>
+                <p class="lang-zh"><strong>最后更新：</strong>2026年6月5日</p>
             </div>
 
             <div class="section">
                 <h2 class="lang-en">Overview</h2>
                 <h2 class="lang-zh">概述</h2>
                 <p class="lang-en">Welcome to Pennary! We take your privacy very seriously. This Privacy Policy explains how we handle your personal information.</p>
-                <p class="lang-en"><strong>In short: We do not collect, store, or share any of your personal data.</strong></p>
+                <p class="lang-en"><strong>In short: We do not collect your personal data. By default, all data stays on your device. Certain optional features may involve network communication as described below.</strong></p>
                 <p class="lang-zh">欢迎使用乱花！我们非常重视您的隐私。本隐私政策说明了我们如何处理您的个人信息。</p>
-                <p class="lang-zh"><strong>简而言之：我们不收集、不存储、不分享您的任何个人数据。</strong></p>
+                <p class="lang-zh"><strong>简而言之：我们不收集您的个人数据。默认情况下，所有数据保留在您的设备上。部分可选功能可能涉及网络通信，详见下文。</strong></p>
             </div>
 
             <div class="section">
                 <h2 class="lang-en">Information Collection</h2>
                 <h2 class="lang-zh">信息收集</h2>
-                <p class="lang-en">Pennary is a completely local application. We:</p>
-                <p class="lang-zh">乱花是一款完全本地化的应用程序。我们：</p>
+                <p class="lang-en">Pennary does not require account registration and does not upload your data to our servers. We:</p>
+                <p class="lang-zh">乱花无需注册账号，不会将您的数据上传到我们的服务器。我们：</p>
                 <ul>
                     <li class="lang-en">Do not collect any personally identifiable information</li>
-                    <li class="lang-en">Do not collect your financial data</li>
                     <li class="lang-en">Do not collect your location information</li>
-                    <li class="lang-en">Do not collect your device information</li>
+                    <li class="lang-en">Do not collect your device information or usage statistics</li>
                     <li class="lang-en">Do not use any analytics or tracking tools</li>
+                    <li class="lang-en">Do not embed any advertising SDKs</li>
                     <li class="lang-zh">不收集任何个人身份信息</li>
-                    <li class="lang-zh">不收集您的财务数据</li>
                     <li class="lang-zh">不收集您的位置信息</li>
-                    <li class="lang-zh">不收集您的设备信息</li>
+                    <li class="lang-zh">不收集您的设备信息或使用统计</li>
                     <li class="lang-zh">不使用任何分析或追踪工具</li>
+                    <li class="lang-zh">不嵌入任何广告 SDK</li>
                 </ul>
             </div>
 
             <div class="section">
                 <h2 class="lang-en">Data Storage</h2>
                 <h2 class="lang-zh">数据存储</h2>
-                <p class="lang-en">All data you create in Pennary (including balance, wish list, debt records, etc.):</p>
-                <p class="lang-zh">您在乱花中创建的所有数据（包括余额、愿望清单、债务记录等）都：</p>
+                <p class="lang-en">All data you create in Pennary is stored locally on your device by default:</p>
+                <p class="lang-zh">您在乱花中创建的所有数据默认存储在设备本地：</p>
                 <ul>
-                    <li class="lang-en">Is stored only on your local device</li>
-                    <li class="lang-en">Is not uploaded to any server</li>
-                    <li class="lang-en">Is not shared with any third parties</li>
-                    <li class="lang-en">Is completely under your control</li>
-                    <li class="lang-zh">仅存储在您的设备本地</li>
-                    <li class="lang-zh">不会上传到任何服务器</li>
-                    <li class="lang-zh">不会与任何第三方共享</li>
-                    <li class="lang-zh">完全由您控制</li>
+                    <li class="lang-en">Ledger entries and categories are stored in a local database</li>
+                    <li class="lang-en">App preferences (language, theme, sound settings) are stored in local preference storage</li>
+                    <li class="lang-en">AI provider configurations (including API keys) are stored locally in app preferences</li>
+                    <li class="lang-en">By default, data is not uploaded to any server</li>
+                    <li class="lang-en">You may optionally enable iCloud Sync — see the iCloud Sync section below</li>
+                    <li class="lang-zh">记账记录和分类存储在本地数据库中</li>
+                    <li class="lang-zh">应用偏好（语言、主题、声音设置）存储在本地偏好存储中</li>
+                    <li class="lang-zh">AI 提供商配置（包括 API Key）存储在本地应用偏好中</li>
+                    <li class="lang-zh">默认情况下，数据不会上传到任何服务器</li>
+                    <li class="lang-zh">您可以选择启用 iCloud 同步——详见下方 iCloud 同步章节</li>
                 </ul>
+            </div>
+
+            <div class="section">
+                <h2 class="lang-en">iCloud Sync</h2>
+                <h2 class="lang-zh">iCloud 同步</h2>
+                <p class="lang-en">On iOS devices, you may optionally enable iCloud Sync to synchronize your ledger entries and categories across devices signed into the same Apple ID. When enabled:</p>
+                <p class="lang-zh">在 iOS 设备上，您可以选择启用 iCloud 同步，将记账记录和分类在登录同一 Apple ID 的设备间同步。启用后：</p>
+                <ul>
+                    <li class="lang-en">Data is transmitted to and stored in Apple's CloudKit service</li>
+                    <li class="lang-en">Data is encrypted in transit and at rest using Apple's standard security measures</li>
+                    <li class="lang-en">You can disable iCloud Sync at any time; your local data will remain on your device</li>
+                    <li class="lang-en">iCloud Sync is disabled by default and must be explicitly turned on by you</li>
+                    <li class="lang-zh">数据会传输到并存储在 Apple 的 CloudKit 服务中</li>
+                    <li class="lang-zh">数据传输和存储均使用 Apple 标准安全措施加密</li>
+                    <li class="lang-zh">您可以随时关闭 iCloud 同步，本地数据会继续保留在设备上</li>
+                    <li class="lang-zh">iCloud 同步默认关闭，需要您主动开启</li>
+                </ul>
+                <p class="lang-en">Apple's privacy policy governs the handling of data stored in your iCloud account.</p>
+                <p class="lang-zh">存储在您 iCloud 账户中的数据受 Apple 隐私政策约束。</p>
+            </div>
+
+            <div class="section">
+                <h2 class="lang-en">AI Services</h2>
+                <h2 class="lang-zh">AI 服务</h2>
+                <p class="lang-en">The app includes an optional AI Agent chat feature. To use this feature:</p>
+                <p class="lang-zh">本应用包含可选的 AI 智能体对话功能。使用此功能需要：</p>
+                <ul>
+                    <li class="lang-en">You must provide your own API key and base URL for an OpenAI-compatible LLM provider</li>
+                    <li class="lang-en">Your API key is stored locally on your device in app preferences</li>
+                    <li class="lang-en">When you send messages in AI chat, the following data is transmitted to your chosen provider's API endpoint:</li>
+                    <li class="lang-zh">您自行提供兼容 OpenAI 的 LLM 提供商的 API Key 和 Base URL</li>
+                    <li class="lang-zh">您的 API Key 仅保存在设备本地的应用偏好中</li>
+                    <li class="lang-zh">发送 AI 对话时，以下数据会传输到您指定的提供商 API 端点：</li>
+                </ul>
+                <div class="highlight" style="margin-left: 20px;">
+                    <p class="lang-en">- Your conversation messages<br>
+                    - The app's system prompt (describing the app's features)<br>
+                    - Your device's time zone and current time<br>
+                    - Your custom persona and rule text (if configured)<br>
+                    - Ledger entries and categories (only when AI tools are invoked to query or modify them)</p>
+                    <p class="lang-zh">- 您的对话消息<br>
+                    - 应用的系统提示（描述应用功能）<br>
+                    - 您设备的时区和当前时间<br>
+                    - 您自定义的人格和规则文本（如有配置）<br>
+                    - 记账记录和分类数据（仅当 AI 工具被调用来查询或修改时）</p>
+                </div>
+                <ul>
+                    <li class="lang-en">We do not have access to your API keys or conversation data</li>
+                    <li class="lang-en">You are fully responsible for choosing your AI provider and reviewing their privacy policy</li>
+                    <li class="lang-en">AI chat is entirely optional and requires explicit provider configuration before use</li>
+                    <li class="lang-zh">我们无法访问您的 API Key 或对话数据</li>
+                    <li class="lang-zh">您需自行选择 AI 提供商并审阅其隐私政策</li>
+                    <li class="lang-zh">AI 对话为完全可选功能，需要您主动配置提供商后才能使用</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2 class="lang-en">Speech Recognition</h2>
+                <h2 class="lang-zh">语音识别</h2>
+                <p class="lang-en">The app supports voice input for AI chat messages using on-device speech recognition services. On iOS, this uses Apple's Siri speech recognition; on Android, it uses the platform's built-in speech service; on OpenHarmony, it uses the device's local speech recognition engine. Audio is processed on-device or through the platform's standard speech recognition pipeline and is not stored or transmitted by the app itself beyond what the platform SDK does.</p>
+                <p class="lang-zh">本应用支持通过语音输入 AI 对话消息，使用设备端语音识别服务。iOS 端使用 Apple Siri 语音识别，Android 端使用平台内置语音服务，OpenHarmony 端使用设备本地语音识别引擎。音频在设备端或通过平台标准语音识别管道处理，应用本身不存储或传输语音数据（超出平台 SDK 本身行为的范围）。</p>
             </div>
 
             <div class="section">
                 <h2 class="lang-en">Third-Party Services</h2>
                 <h2 class="lang-zh">第三方服务</h2>
-                <p class="lang-en">Pennary does not use any third-party services, SDKs, or analytics tools. Your data always remains on your device.</p>
-                <p class="lang-zh">乱花不使用任何第三方服务、SDK 或分析工具。您的数据始终保留在您的设备上。</p>
+                <p class="lang-en">Pennary does not embed any third-party analytics, tracking, or advertising SDKs. The only third-party services involved are those you explicitly opt into:</p>
+                <p class="lang-zh">乱花不嵌入任何第三方分析、追踪或广告 SDK。仅涉及的第三方服务为您主动选择的功能：</p>
+                <ul>
+                    <li class="lang-en"><strong>iCloud Sync</strong> (optional, iOS only) — data synced through Apple CloudKit</li>
+                    <li class="lang-en"><strong>AI Provider API</strong> (optional) — conversation and ledger data sent to your chosen LLM provider</li>
+                    <li class="lang-en"><strong>Speech Recognition</strong> — handled by the device's platform-level speech service</li>
+                    <li class="lang-zh"><strong>iCloud 同步</strong>（可选，仅 iOS）——数据通过 Apple CloudKit 同步</li>
+                    <li class="lang-zh"><strong>AI 提供商 API</strong>（可选）——对话和记账数据发送至您选择的大模型提供商</li>
+                    <li class="lang-zh"><strong>语音识别</strong>——由设备平台级语音服务处理</li>
+                </ul>
             </div>
 
             <div class="section">
