@@ -1,424 +1,646 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>嘟嘎记账 - 隐私政策</title>
-    <link rel="icon" type="image/png" href="icon.png">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>嘟嘎记账 - 隐私政策 | DugaLedger Privacy Policy</title>
+  <meta name="description" content="嘟嘎记账隐私政策，说明本地账本、平台账号、AI、图片、iCloud、内购和权限的数据处理方式。">
+  <link rel="icon" type="image/png" href="icon.png">
+  <style>
+    :root {
+      --ink: #24332b;
+      --muted: #59675f;
+      --paper: #fffdf8;
+      --canvas: #f6f2e9;
+      --line: #ded5c5;
+      --leaf: #315c3f;
+      --leaf-soft: #e8f0e8;
+      --warn: #7a4b1f;
+      --warn-soft: #fff3df;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-            line-height: 1.75;
-            color: #253036;
-            background: #f7f4ed;
-            min-height: 100vh;
-            padding: 20px;
-        }
+    * { box-sizing: border-box; }
 
-        .container {
-            max-width: 860px;
-            margin: 0 auto;
-            background: #fffdf8;
-            border: 1px solid #ded4c4;
-            border-radius: 16px;
-            box-shadow: 0 18px 50px rgba(64, 48, 28, 0.14);
-            overflow: hidden;
-        }
+    html { scroll-behavior: smooth; }
 
-        .header {
-            position: relative;
-            padding: 44px 30px 34px;
-            text-align: center;
-            background: #e7f0e8;
-            border-bottom: 1px solid #d6dfd5;
-        }
+    body {
+      margin: 0;
+      padding: 20px;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
 
-        .language-switcher {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            display: flex;
-            gap: 8px;
-        }
+    a { color: var(--leaf); }
 
-        .language-switcher button {
-            border: 1px solid #7a8f78;
-            background: transparent;
-            color: #304234;
-            padding: 7px 12px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 600;
-        }
+    .container {
+      max-width: 940px;
+      margin: 0 auto;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 20px 58px rgba(64, 48, 28, 0.13);
+      overflow: hidden;
+    }
 
-        .language-switcher button.active {
-            background: #304234;
-            color: #ffffff;
-        }
+    .header {
+      position: relative;
+      padding: 46px 32px 34px;
+      text-align: center;
+      background: var(--leaf-soft);
+      border-bottom: 1px solid #d6dfd5;
+    }
 
-        .app-icon {
-            width: 96px;
-            height: 96px;
-            border-radius: 22px;
-            margin: 0 auto 18px;
-            display: block;
-            box-shadow: 0 10px 24px rgba(48, 66, 52, 0.22);
-        }
+    .language-switcher {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      gap: 8px;
+    }
 
-        h1 {
-            font-size: 32px;
-            line-height: 1.25;
-            margin-bottom: 8px;
-            color: #1f2c24;
-        }
+    .language-switcher button {
+      border: 1px solid #738b77;
+      background: transparent;
+      color: #2f4735;
+      padding: 7px 12px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+    }
 
-        .subtitle {
-            font-size: 16px;
-            color: #52645a;
-        }
+    .language-switcher button.active {
+      background: #304b36;
+      color: #fff;
+    }
 
-        .content {
-            padding: 34px 30px 12px;
-        }
+    .app-icon {
+      display: block;
+      width: 94px;
+      height: 94px;
+      margin: 0 auto 18px;
+      border-radius: 22px;
+      box-shadow: 0 10px 24px rgba(48, 66, 52, 0.22);
+    }
 
-        .notice {
-            margin-bottom: 28px;
-            padding: 18px 20px;
-            border-left: 4px solid #658a63;
-            background: #f1f6ef;
-            border-radius: 10px;
-        }
+    h1 {
+      margin: 0 0 7px;
+      color: #1e2c23;
+      font-size: 32px;
+      line-height: 1.25;
+    }
 
-        .section {
-            margin-bottom: 30px;
-        }
+    .subtitle {
+      margin: 0;
+      color: #52645a;
+      font-size: 16px;
+    }
 
-        .section h2 {
-            font-size: 22px;
-            line-height: 1.35;
-            color: #315536;
-            margin-bottom: 12px;
-        }
+    .top-nav {
+      padding: 14px 24px 0;
+      text-align: center;
+      font-size: 14px;
+    }
 
-        .section p {
-            font-size: 16px;
-            color: #465349;
-            margin-bottom: 12px;
-            white-space: pre-line;
-        }
+    .top-nav a {
+      display: inline-block;
+      margin: 0 8px;
+      padding: 5px 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+    }
 
-        .section ul {
-            margin: 8px 0 12px 22px;
-            color: #465349;
-        }
+    .top-nav a[aria-current="page"] {
+      background: #eef3ea;
+    }
 
-        .section li {
-            margin-bottom: 8px;
-        }
+    .content {
+      padding: 34px 32px 12px;
+    }
 
-        .footer {
-            padding: 24px 30px 30px;
-            text-align: center;
-            color: #667267;
-            font-size: 14px;
-            border-top: 1px solid #ece4d8;
-        }
+    .notice,
+    .callout {
+      padding: 17px 19px;
+      border-radius: 11px;
+    }
 
-        .lang-en {
-            display: none;
-        }
+    .notice {
+      margin-bottom: 28px;
+      border-left: 4px solid #658a63;
+      background: #f1f6ef;
+    }
 
-        .lang-zh {
-            display: block;
-        }
+    .callout {
+      margin: 14px 0;
+      border: 1px solid #ead3ad;
+      background: var(--warn-soft);
+      color: #5e3b16;
+    }
 
-        li.lang-zh {
-            display: list-item;
-        }
+    .notice p:last-child,
+    .callout p:last-child,
+    .section p:last-child,
+    .section ul:last-child {
+      margin-bottom: 0;
+    }
 
-        body.en .lang-zh {
-            display: none;
-        }
+    .section {
+      margin-bottom: 34px;
+    }
 
-        body.en .lang-en {
-            display: block;
-        }
+    .section h2 {
+      margin: 0 0 12px;
+      color: #315536;
+      font-size: 22px;
+      line-height: 1.35;
+    }
 
-        body.en li.lang-en {
-            display: list-item;
-        }
+    .section h3 {
+      margin: 18px 0 8px;
+      color: #38533e;
+      font-size: 17px;
+    }
 
-        @media (max-width: 720px) {
-            body {
-                padding: 10px;
-            }
+    .section p,
+    .section li {
+      color: #465349;
+      font-size: 16px;
+    }
 
-            .header {
-                padding: 58px 18px 28px;
-            }
+    .section p {
+      margin: 0 0 12px;
+    }
 
-            h1 {
-                font-size: 27px;
-            }
+    .section ul {
+      margin: 8px 0 14px 22px;
+      padding: 0;
+    }
 
-            .content {
-                padding: 26px 18px 8px;
-            }
+    .section li {
+      margin-bottom: 8px;
+    }
 
-            .section h2 {
-                font-size: 19px;
-            }
-        }
-    </style>
+    .tag {
+      display: inline-block;
+      margin: 0 2px;
+      padding: 0 5px;
+      border: 1px solid #bfd1c1;
+      border-radius: 5px;
+      background: #f3f8f1;
+      color: #2f5539;
+      font-size: 0.82em;
+      font-weight: 700;
+      line-height: 1.55;
+      white-space: nowrap;
+    }
+
+    code {
+      padding: 1px 5px;
+      border-radius: 5px;
+      background: #f1ede3;
+      font-size: 0.92em;
+      word-break: break-all;
+    }
+
+    .footer {
+      padding: 24px 32px 32px;
+      border-top: 1px solid #ece4d8;
+      color: #667267;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .lang-en { display: none; }
+
+    body.en .lang-zh { display: none; }
+    body.en .lang-en { display: block; }
+
+    @media (max-width: 720px) {
+      body { padding: 10px; }
+      .header { padding: 58px 18px 28px; }
+      h1 { font-size: 27px; }
+      .content { padding: 26px 18px 8px; }
+      .section h2 { font-size: 19px; }
+      .top-nav { padding-left: 10px; padding-right: 10px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="language-switcher">
-                <button onclick="switchLanguage('zh')" id="btn-zh" class="active">中文</button>
-                <button onclick="switchLanguage('en')" id="btn-en">English</button>
-            </div>
-            <img src="icon.png" alt="嘟嘎记账应用图标" class="app-icon">
-            <h1 class="lang-zh">嘟嘎记账</h1>
-            <h1 class="lang-en">DugaLedger</h1>
-            <p class="subtitle lang-zh">隐私政策</p>
-            <p class="subtitle lang-en">Privacy Policy</p>
-        </header>
+  <div class="container">
+    <header class="header">
+      <div class="language-switcher" aria-label="Language / 语言">
+        <button type="button" id="btn-zh" class="active" onclick="switchLanguage('zh')">中文</button>
+        <button type="button" id="btn-en" onclick="switchLanguage('en')">English</button>
+      </div>
+      <img src="icon.png" alt="嘟嘎记账应用图标 / DugaLedger app icon" class="app-icon">
+      <div class="lang-zh">
+        <h1>嘟嘎记账</h1>
+        <p class="subtitle">隐私政策</p>
+      </div>
+      <div class="lang-en">
+        <h1>DugaLedger</h1>
+        <p class="subtitle">Privacy Policy</p>
+      </div>
+    </header>
 
-        <main class="content">
-            <div class="notice">
-                <p class="lang-zh"><strong>更新日期：</strong>2026年7月6日</p>
-                <p class="lang-zh"><strong>生效日期：</strong>2026年7月6日</p>
-                <p class="lang-en"><strong>Last updated:</strong> July 6, 2026</p>
-                <p class="lang-en"><strong>Effective date:</strong> July 6, 2026</p>
-            </div>
+    <nav class="top-nav lang-zh" aria-label="页面导航">
+      <a href="index.html" aria-current="page">隐私政策</a>
+      <a href="terms.html">用户协议</a>
+    </nav>
+    <nav class="top-nav lang-en" aria-label="Page navigation">
+      <a href="index.html" aria-current="page">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
 
-            <section class="section">
-                <h2 class="lang-zh">关于嘟嘎记账与隐私的声明</h2>
-                <h2 class="lang-en">Privacy Statement for DugaLedger</h2>
-                <p class="lang-zh">“嘟嘎记账”是由叶子豪（开发者）为您提供本地记账、统计、个性化显示、可选 AI 记账辅助、可选 iCloud 同步、语音输入、文字识别和 iOS 快捷指令文本导入能力的应用。我们非常重视您的个人信息和隐私保护，会按照法律要求和业界成熟的安全标准，为您的个人信息提供相应的安全保护措施。</p>
-                <p class="lang-en">“DugaLedger” is provided by Zihao Ye as an app for local bookkeeping, statistics, personalized display settings, optional AI bookkeeping assistance, optional iCloud Sync, voice input, image text recognition, and iOS Shortcut text import. We value your personal information and privacy, and we apply reasonable security measures consistent with legal requirements and mature industry practices.</p>
-            </section>
+    <main class="content">
+      <div class="notice lang-zh">
+        <p><strong>更新日期：</strong>2026年10月26日</p>
+        <p><strong>生效日期：</strong>2026年10月26日</p>
+      </div>
+      <div class="notice lang-en">
+        <p><strong>Last updated:</strong> October 26, 2026</p>
+        <p><strong>Effective date:</strong> October 26, 2026</p>
+      </div>
 
-            <section class="section">
-                <h2 class="lang-zh">摘要</h2>
-                <h2 class="lang-en">Summary</h2>
-                <p class="lang-zh">嘟嘎记账无需注册账号。默认情况下，您的记账数据和设置保存在设备本地，我们不会上传到自有服务器，也不会收集地理位置、Android_ID、IMEI、IMSI、MAC地址、OAID、软件安装列表、手机号码、联系人信息、短信、通话记录或用于广告分析的数据。</p>
-                <p class="lang-zh">部分可选功能会在您主动使用或授权后处理必要信息：AI 对话会将您输入的消息及必要账本上下文发送至您自行配置的模型提供商；iOS iCloud 同步会通过 Apple CloudKit 同步数据；语音输入会调用录音和语音识别能力；文字识别会调用相机或存储权限；通知和振动会调用对应系统能力。</p>
-                <p class="lang-en">DugaLedger does not require account registration. By default, your ledger data and settings are stored locally on your device. We do not upload them to our own servers, and we do not collect location, device identifiers, usage statistics, advertising data, analytics data, or tracking data.</p>
-                <p class="lang-en">Some optional features process necessary information only after you actively use or authorize them: AI chat sends your messages and necessary ledger context to the model provider you configure; iOS iCloud Sync synchronizes data through Apple CloudKit; voice input, camera/photo image text recognition, notifications, and vibration use the corresponding system capabilities.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>适用范围与声明</h2>
+          <p>本政策适用于嘟嘎记账（DugaLedger）应用及本隐私政策页面。嘟嘎记账由嘟嘎记账团队（下称“我们”）提供，我们是相关个人信息的处理者。应用提供本地记账、统计、个性化显示、可选 AI 辅助记账、可选 iCloud 同步、语音输入、图片识别与分享导入等功能。</p>
+          <p><span class="tag">Android</span> 端无需账号；<span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> 端使用 AI 前需通过 Apple / 华为登录并连接 CyanLeaf。请在使用前阅读本政策；首次进入主功能前，应用会要求您确认本政策。</p>
+        </div>
+        <div class="lang-en">
+          <h2>Scope and statement</h2>
+          <p>This policy applies to the DugaLedger app and this privacy policy page. DugaLedger is provided by the DugaLedger Team (“we”), which is the controller of the relevant personal information. The app provides local bookkeeping, statistics, personalized display, optional AI-assisted bookkeeping, optional iCloud Sync, voice input, image recognition, and share import.</p>
+          <p><span class="tag">Android</span> requires no account. On <span class="tag">iOS</span> / <span class="tag">OpenHarmony</span>, using AI requires signing in with Apple / Huawei and connecting to CyanLeaf. Please read this policy before use. Before you first enter the main features, the app will ask you to accept this policy.</p>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">1. 我们如何收集和使用您的个人信息</h2>
-                <h2 class="lang-en">1. How We Collect and Use Personal Information</h2>
-                <p class="lang-zh">我们仅在实现本应用功能所必需、基于您的主动操作或系统授权的范围内处理信息。</p>
-                <p class="lang-zh">1.1 本地记账与设置：应用会在设备本地保存收支记录、分类、主页信息卡片和布局、语言/主题/显示、声音/振动、用户导入字体和自定义声音文件等配置，用于提供记账、统计和个性化显示。</p>
-                <p class="lang-zh">1.2 AI 记账辅助：当您主动配置模型提供商并使用 AI 对话时，应用会把您的对话消息、应用系统提示、设备时区和当前时间、自定义人格/规则文本，以及在工具调用中必要的账本记录和分类数据，发送到您指定的模型提供商 API 端点。API Key 和 Base URL 保存在设备本地。我们无法访问您的 API Key、对话内容或账本数据。</p>
-                <p class="lang-zh">1.3 语音、文字识别和快捷指令：语音输入会调用录音和语音识别能力，用于把您的语音转换为 AI 记账消息；拍照识别会调用相机；从系统选择内容识别文字会调用存储权限，并将识别文字发送到正常 AI 消息流程；iOS 快捷指令仅把快捷指令产出的临时文本送入应用。用于文字识别的内容仅在内存中处理，不保存文件路径、缓存副本或附件。</p>
-                <p class="lang-en">We process information only as necessary to provide app features, based on your active actions or system authorization.</p>
-                <p class="lang-en">1.1 Local bookkeeping and settings: the app stores ledger entries, categories, home info cards and layouts, language/theme/display settings, sound/vibration settings, and user-imported fonts and audio on your device to provide bookkeeping, statistics, and personalized display features.</p>
-                <p class="lang-en">1.2 AI bookkeeping assistance: when you configure a model provider and use AI chat, the app sends your conversation messages, the app system prompt, your device time zone and current time, custom persona/rule text, and ledger entries or categories needed by tool calls to the model provider API endpoint you configured. API keys and base URLs are stored locally on your device. We cannot access your API keys, conversation content, or ledger data.</p>
-                <p class="lang-en">1.3 Voice, image text recognition, and Shortcuts: voice input converts your speech into AI bookkeeping messages; camera capture or photo selection recognizes image text and sends it through the normal AI message flow; iOS Shortcuts only pass temporary text produced by the shortcut into the app. Images are used in memory for recognition only; the app does not save images, file paths, cached copies, or attachments.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>摘要</h2>
+          <p>本应用以本地记账为核心，账本、预算、主题、设置和 AI 会话默认保存在设备本地。只有在您使用平台登录、AI、iCloud 同步、内购、系统语音/识别或主动导出/分享时，相关信息才会按本政策在设备、Apple、华为、CyanLeaf、模型提供商或您选择的位置之间处理。</p>
+          <p>Android 端无平台账号和 CyanLeaf 额度；iOS / OpenHarmony 端登录后由 CyanLeaf 提供账户、钱包、订单、额度流水和 AI 网关配置。应用未集成广告、分析或追踪 SDK，不出售个人信息，也不将数据用于跨应用追踪。</p>
+        </div>
+        <div class="lang-en">
+          <h2>Summary</h2>
+          <p>DugaLedger is built around local bookkeeping. Ledger data, budgets, themes, settings, and AI sessions are stored locally by default. Information is processed between your device, Apple, Huawei, CyanLeaf, model providers, or a location you choose only when you use platform sign-in, AI, iCloud Sync, purchases, system speech/recognition, or an export/share action.</p>
+          <p>Android has no platform account and no CyanLeaf credits. On iOS / OpenHarmony, CyanLeaf provides the account, wallet, orders, credit activity, and AI gateway configuration after sign-in. The app contains no advertising, analytics, or tracking SDKs, does not sell personal information, and does not use data for cross-app tracking.</p>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">本地存储</h2>
-                <h2 class="lang-en">Local Storage</h2>
-                <p class="lang-zh">应用会通过本地数据库、偏好存储和应用支持目录在您的设备上保存必要数据，包括：</p>
-                <ul>
-                    <li class="lang-zh">收入和支出记录</li>
-                    <li class="lang-zh">分类配置</li>
-                    <li class="lang-zh">主页信息卡片和布局</li>
-                    <li class="lang-zh">语言、主题、显示、声音和振动设置</li>
-                    <li class="lang-zh">用户导入字体和自定义声音文件</li>
-                    <li class="lang-zh">AI 提供商配置（包括 API Key）、人格、规则和会话历史</li>
-                </ul>
-                <p class="lang-zh">默认情况下，上述数据仅保存在您的设备上。您可以选择在 iOS 设备上启用 iCloud 同步，详见 iCloud 同步章节。</p>
-                <p class="lang-en">The app stores necessary data on your device using a local database, preference storage, and the app support directory, including:</p>
-                <ul>
-                    <li class="lang-en">Income and expense records</li>
-                    <li class="lang-en">Category configurations</li>
-                    <li class="lang-en">Home info cards and layouts</li>
-                    <li class="lang-en">Language, theme, display, sound, and vibration settings</li>
-                    <li class="lang-en">User-imported fonts and audio</li>
-                    <li class="lang-en">AI provider configurations (including API keys), personas, rules, and conversation history</li>
-                </ul>
-                <p class="lang-en">By default, this data remains on your device. You may optionally enable iCloud Sync on iOS devices. See the iCloud Sync section below.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>1. 数据清单与使用目的</h2>
+          <p>我们只在实现下列功能所需的范围内处理信息：</p>
+          <ul>
+            <li><strong>本地记账与个性化：</strong>收支记录、分类、预算、余额快照、主题、语言与显示设置，用于记账、统计和界面展示。</li>
+            <li><strong>平台账号 <span class="tag">iOS</span> <span class="tag">OpenHarmony</span>：</strong>Apple / 华为身份凭据、nonce 或授权码、设备标识（iOS IDFV / OpenHarmony ODID）、应用版本，以及 CyanLeaf 返回的账户资料、钱包、订单、额度流水和 AI 网关配置，用于登录、账户展示、额度和 AI 可用性判断。</li>
+            <li><strong>AI 辅助记账 <span class="tag">全平台</span>：</strong>对话与历史会话上下文、应用系统提示、设备时间与时区、启用的规则、分类名称摘要、工具定义、模型生成的工具调用、工具返回结果、工具所需账本/分类数据和需要模型读取的图片，用于生成回复及直接执行记账工具。</li>
+            <li><strong>图片与语音：</strong>图片用于本地文字识别或模型读取；语音由系统语音服务转写为输入文本。</li>
+            <li><strong>分享与快捷指令 <span class="tag">iOS</span> <span class="tag">OpenHarmony</span>：</strong>iOS 分享扩展或“嘟嘎截屏记账”快捷指令把图片写入 App Group 队列，OpenHarmony 分享扩展把图片写入应用缓存；应用在您同意本政策并实际导入时读取。</li>
+            <li><strong>iCloud 同步 <span class="tag">iOS</span>：</strong>仅在您主动开启时同步收支记录、分类、预算、余额快照、同步状态及同步元数据。</li>
+            <li><strong>内购与额度 <span class="tag">iOS</span> <span class="tag">OpenHarmony</span>：</strong>商店处理付款；应用与 CyanLeaf 处理商品标识、交易标识、票据验签、订单、额度和用量记录。</li>
+          </ul>
+          <p>应用不会请求地理位置、通讯录、短信、通话记录或软件安装列表，也不会将这些数据用于广告画像或跨应用追踪。</p>
+        </div>
+        <div class="lang-en">
+          <h2>1. Data inventory and purposes</h2>
+          <p>We process information only as needed for the following features:</p>
+          <ul>
+            <li><strong>Local bookkeeping and personalization:</strong> entries, categories, budgets, balance snapshots, themes, language, and display settings for bookkeeping, statistics, and display.</li>
+            <li><strong>Platform account <span class="tag">iOS</span> <span class="tag">OpenHarmony</span>:</strong> Apple / Huawei identity credentials, nonce or authorization code, device identifier (iOS IDFV / OpenHarmony ODID), app version, and the account profile, wallet, orders, credit activity, and AI gateway configuration returned by CyanLeaf, for sign-in, account display, credits, and AI availability.</li>
+            <li><strong>AI-assisted bookkeeping <span class="tag">all platforms</span>:</strong> the current message and prior conversation context, app system prompt, device time and time zone, enabled rules, category-name digest, tool definitions, model-generated tool calls, tool results, ledger/category data required by tools, and images the model must read, to generate replies and directly execute bookkeeping tools.</li>
+            <li><strong>Images and voice:</strong> images are used for local text recognition or model reading; speech is transcribed into input text by the system speech service.</li>
+            <li><strong>Sharing and Shortcuts <span class="tag">iOS</span> <span class="tag">OpenHarmony</span>:</strong> the iOS share extension or the installed “Duga Screenshot Ledger” shortcut writes images to an App Group queue, and the OpenHarmony share extension writes them into app cache; the app reads them after you accept this policy and only when importing.</li>
+            <li><strong>iCloud Sync <span class="tag">iOS</span>:</strong> when you enable it, entries, categories, budgets, balance snapshots, sync state, and sync metadata are synchronized.</li>
+            <li><strong>Purchases and credits <span class="tag">iOS</span> <span class="tag">OpenHarmony</span>:</strong> the store processes payment; the app and CyanLeaf process product identifiers, transaction identifiers, receipt verification, orders, credits, and usage records.</li>
+          </ul>
+          <p>The app does not request location, contacts, SMS, call logs, or the installed-app list, and does not use such data for advertising profiles or cross-app tracking.</p>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">2. 设备权限调用</h2>
-                <h2 class="lang-en">2. Device Permissions</h2>
-                <p class="lang-zh">本应用在运行过程中可能使用以下权限或系统能力，我们会在使用前通过系统弹窗或功能入口征求您的意见，未明确同意的权限不会被随意调用。</p>
-                <ul>
-                    <li class="lang-zh">网络权限：当您使用 AI 模型提供商 API、iCloud 同步或打开外部链接时使用。</li>
-                    <li class="lang-zh">录音：当您使用语音输入 AI 记账消息时使用。</li>
-                    <li class="lang-zh">相机：当您拍照识别文字并发送给 AI 时使用。</li>
-                    <li class="lang-zh">存储权限：当您从系统选择内容进行文字识别时使用。</li>
-                    <li class="lang-zh">通知权限：在 iOS 上，当 AI 回答在应用非前台完成或失败时发送本地通知。</li>
-                    <li class="lang-zh">振动权限：当您开启或使用触感反馈时调用设备振动能力。</li>
-                </ul>
-                <p class="lang-zh">您可以随时访问系统“设置”管理权限。不同操作系统或应用版本的权限名称可能存在差异，以您实际使用的系统提示为准。</p>
-                <p class="lang-en">During use, this app may use the following permissions or system capabilities. We request them through system prompts or feature entry points before use. Permissions you have not explicitly granted will not be called arbitrarily.</p>
-                <ul>
-                    <li class="lang-en">Network: used when you access an AI model provider API, iCloud Sync, or external links.</li>
-                    <li class="lang-en">Microphone/Speech Recognition: used when you input AI bookkeeping messages by voice.</li>
-                    <li class="lang-en">Camera: used when you take a photo for image text recognition and send the text to AI.</li>
-                    <li class="lang-en">Photo Library: used when you select one or more photos for image text recognition.</li>
-                    <li class="lang-en">Notifications: on iOS, used to send local notifications when an AI response completes or fails while the app is not in the foreground.</li>
-                    <li class="lang-en">Vibration: used when haptic feedback is enabled or triggered.</li>
-                </ul>
-                <p class="lang-en">You can manage permissions at any time in system Settings. Permission names may differ by operating system or app version; refer to the actual system prompts on your device.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>2. 本地数据与云端边界</h2>
+          <p>应用通过本地数据库、应用偏好/键值存储和应用支持目录保存：</p>
+          <ul>
+            <li>收支记录、分类、预算、余额快照及其同步元数据</li>
+            <li>语言、显示、主题、自动分类和 AI 显示设置</li>
+            <li>AI 规则、自定义主题，以及 <span class="tag">Android</span> 模型提供商名称、Base URL、模型、额外请求头和 API Key</li>
+            <li><span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> 账户展示资料、CyanLeaf 会话令牌和待核验内购票据</li>
+            <li>AI 会话快照、会话索引、仅界面使用的会话记录和聊天图片</li>
+            <li><span class="tag">iOS</span> App Group 分享/快捷指令图片、<span class="tag">Android</span> <code>filesDir/floating_ball_images</code> 悬浮球截屏、<span class="tag">OpenHarmony</span> <code>cacheDir/shared_image_inbox</code> 分享副本</li>
+          </ul>
+          <p><span class="tag">Android</span> API Key 以明文保存在应用本地键值存储 <code>luanhua_kv.db</code>；模型配置也会进入主动导出的备份。<span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> CyanLeaf 令牌以明文保存在应用偏好（SharedPreferences），未使用 Keychain/Keystore；账户资料和待核验票据也保存在本地，CyanLeaf 下发的 AI 网关密钥只在内存中使用。</p>
+          <p>删除会话会同时删除该会话的 AI 快照、界面记录和聊天图片。账本内容在本地保存；仅在实际使用 AI、iCloud、导出/分享或平台账号功能时，按下方所述发送给相应服务。</p>
+        </div>
+        <div class="lang-en">
+          <h2>2. Local data and cloud boundaries</h2>
+          <p>The app stores data in its local database, app preferences/key-value storage, and app support directory:</p>
+          <ul>
+            <li>Entries, categories, budgets, balance snapshots, and their sync metadata</li>
+            <li>Language, display, theme, auto-category, and AI display settings</li>
+            <li>AI rules, custom themes, and <span class="tag">Android</span> model-provider name, Base URL, model, extra headers, and API Key</li>
+            <li><span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> account display data, CyanLeaf session tokens, and pending purchase tickets</li>
+            <li>AI session snapshots, session index, UI-only session records, and chat images</li>
+            <li><span class="tag">iOS</span> App Group shared and shortcut images, <span class="tag">Android</span> <code>filesDir/floating_ball_images</code> floating-ball screenshots, <span class="tag">OpenHarmony</span> <code>cacheDir/shared_image_inbox</code> shared copies</li>
+          </ul>
+          <p>On <span class="tag">Android</span>, API Keys are stored as plaintext in the local key-value store <code>luanhua_kv.db</code>, and model configuration is included in a user-initiated backup. On <span class="tag">iOS</span> / <span class="tag">OpenHarmony</span>, CyanLeaf tokens are stored as plaintext in app preferences (SharedPreferences), not in Keychain/Keystore; account profile data and pending tickets are also local, while the CyanLeaf AI gateway key exists only in memory.</p>
+          <p>Deleting a conversation deletes its AI snapshot, UI records, and chat images. Ledger content is stored locally and is sent to the relevant services described below only when you actually use AI, iCloud, export/share, or platform-account features.</p>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">3. 对未成年人的保护</h2>
-                <h2 class="lang-en">3. Protection of Minors</h2>
-                <p class="lang-zh">我们非常重视对未成年人个人信息的保护。嘟嘎记账不是专门面向儿童的应用，也不主动收集儿童个人信息。</p>
-                <p class="lang-zh">如果您是未成年人，请在父母或其他监护人同意和指导下使用本应用。如果您是不满十四周岁儿童的父母或其他监护人，请监督并指导儿童使用本应用，避免在记账内容、AI 对话、人格、规则或自定义配置中输入不必要的个人敏感信息。</p>
-                <p class="lang-en">We value the protection of minors' personal information. DugaLedger is not specifically directed to children, and we do not actively collect children's personal information.</p>
-                <p class="lang-en">If you are a minor, please use this app with the consent and guidance of your parent or other guardian. If you are the parent or guardian of a child under 14, please supervise and guide the child's use of this app, and avoid entering unnecessary sensitive personal information in ledger entries, AI conversations, personas, rules, or custom settings.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>3. 用户主动备份</h2>
+          <p>您可以主动将账本、分类、预算、余额快照、主题、AI 规则、自动分类和 AI 显示设置导出为明文 JSON 文件，<span class="tag">Android</span> 还可包含自定义模型提供商配置；文件还带有格式版本、导出平台、应用版本和导出时间等元数据。若导出内容包含自定义模型配置，其中的 API Key 也是明文；分享、上传或保留该文件时，任何取得文件的人都可能读取并使用该密钥。</p>
+          <div class="callout"><p>导出前应用会显示明确警告。文件的安全保存、传输和删除由您负责；请仅在可信位置保存，并在不再需要时及时删除。</p></div>
+          <p>导入备份可能覆盖当前数据，请确认来源与完整性。</p>
+        </div>
+        <div class="lang-en">
+          <h2>3. User-initiated backups</h2>
+          <p>You may export ledger data, categories, budgets, balance snapshots, themes, AI rules, auto-category settings, and AI display settings as a plaintext JSON file, and <span class="tag">Android</span> exports may also include custom model-provider configuration. The file also carries metadata such as the format version, export platform, app version, and export time. If the export includes custom model configuration, the API Key inside is also plaintext; anyone who obtains the file may read and use that key.</p>
+          <div class="callout"><p>The app shows a clear warning before export. You are responsible for securely storing, transferring, and deleting the file. Keep it in a trusted location and delete it when no longer needed.</p></div>
+          <p>Importing a backup may overwrite current data. Verify its source and integrity.</p>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">4. 与第三方共享及 5. 第三方 SDK</h2>
-                <h2 class="lang-en">4. Third-Party Sharing and 5. Third-Party SDKs</h2>
-                <p class="lang-zh">本应用不嵌入第三方广告、分析或追踪 SDK，也不向我们的服务器上传您的个人信息。</p>
-                <p class="lang-zh">为实现您主动选择的功能，可能涉及以下第三方或系统服务：</p>
-                <ul>
-                    <li class="lang-zh">AI 模型提供商：由您自行配置 API Key 和 Base URL。使用 AI 对话时，对话内容和必要账本上下文会通过网络发送至您选择的提供商。请自行审阅该提供商的个人信息处理规则。</li>
-                    <li class="lang-zh">Apple iCloud/CloudKit：仅在 iOS 端且您主动开启 iCloud 同步后使用，用于在同一 Apple ID 设备间同步记账数据。</li>
-                    <li class="lang-zh">平台语音识别服务：在您使用语音输入时调用 iOS、Android 或 OpenHarmony 的系统语音识别能力，可能涉及录音。</li>
-                    <li class="lang-zh">iOS/OpenHarmony 文字识别服务：在您使用文字识别时调用相机或存储权限，用于拍照、选择内容并识别文字。</li>
-                    <li class="lang-zh">iOS 本地通知：在您授权后，用于在应用处于非前台时提示 AI 回答完成或失败。</li>
-                </ul>
-                <p class="lang-zh">上述服务的处理规则由对应服务提供方或操作系统平台约束。不同系统版本的权限名称和处理方式可能存在差异，请以实际系统提示为准。</p>
-                <p class="lang-en">This app does not embed third-party advertising, analytics, or tracking SDKs, and it does not upload your personal information to our own servers.</p>
-                <p class="lang-en">To provide features you actively choose, the following third-party or system services may be involved:</p>
-                <ul>
-                    <li class="lang-en">AI model provider: configured by you with an API key and base URL. When you use AI chat, conversation content and necessary ledger context are sent over the network to the provider you choose. Please review that provider's personal information processing rules.</li>
-                    <li class="lang-en">Apple iCloud/CloudKit: used only on iOS after you enable iCloud Sync, to synchronize ledger data across devices signed into the same Apple ID.</li>
-                    <li class="lang-en">Platform speech recognition service: used when you use voice input on iOS, Android, or OpenHarmony.</li>
-                    <li class="lang-en">iOS/OpenHarmony image text recognition services: used when you recognize text from camera or photo library images.</li>
-                    <li class="lang-en">iOS local notifications: used after your authorization to notify you when an AI response finishes or fails while the app is not in the foreground.</li>
-                </ul>
-                <p class="lang-en">The processing rules for these services are governed by the corresponding service provider or operating system platform. Permission names and handling may differ by operating system version; please refer to the actual system prompts.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>4. 平台账号与 CyanLeaf</h2>
+          <p><span class="tag">Android</span> 无需账号，也不提供 CyanLeaf 额度或 AI 网关账号。<span class="tag">iOS</span> 通过 Apple 登录，<span class="tag">OpenHarmony</span> 通过华为账号登录，随后绑定 CyanLeaf。</p>
+          <p>登录时，应用向 CyanLeaf 发送 Apple 身份令牌与 nonce 或华为授权码、设备标识（iOS 为 IDFV，OpenHarmony 为 ODID）和应用版本；CyanLeaf 返回账户资料、钱包、订单、额度流水及 AI 网关配置。账户标识、昵称和头像地址用于显示当前账号、判断 AI 是否可用。</p>
+          <p>CyanLeaf 令牌保存在本地应用偏好；退出登录会清除本地账户登录会话。注销账号会清除账户会话和待核验票据，但不删除本地账本、iCloud 数据或 Android 自定义模型配置。</p>
+        </div>
+        <div class="lang-en">
+          <h2>4. Platform accounts and CyanLeaf</h2>
+          <p><span class="tag">Android</span> requires no account and offers no CyanLeaf credits or AI gateway account. <span class="tag">iOS</span> uses Sign in with Apple, while <span class="tag">OpenHarmony</span> uses a Huawei account, then binds CyanLeaf.</p>
+          <p>During sign-in, the app sends CyanLeaf the Apple identity token and nonce or Huawei authorization code, device identifier (IDFV on iOS, ODID on OpenHarmony), and app version. CyanLeaf returns the account profile, wallet, orders, credit activity, and AI gateway configuration. The account identifier, nickname, and avatar URL are used to display the current account and determine AI availability.</p>
+          <p>CyanLeaf tokens are kept in local app preferences. Signing out clears the local account sign-in session. Deleting the account clears the account session and pending tickets, but does not delete the local ledger, iCloud data, or Android custom model configuration.</p>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">iCloud 同步</h2>
-                <h2 class="lang-en">iCloud Sync</h2>
-                <p class="lang-zh">在 iOS 设备上，您可以选择启用 iCloud 同步，将记账记录和分类在登录同一 Apple ID 的设备间同步。启用后：</p>
-                <ul>
-                    <li class="lang-zh">数据会传输到并存储在 Apple 的 CloudKit 服务中</li>
-                    <li class="lang-zh">数据传输和存储均使用 Apple 标准安全措施加密</li>
-                    <li class="lang-zh">您可以随时关闭 iCloud 同步，本地数据会继续保留在设备上</li>
-                    <li class="lang-zh">iCloud 同步默认关闭，需要您主动开启</li>
-                </ul>
-                <p class="lang-zh">存储在您 iCloud 账户中的数据受 Apple 隐私政策约束。</p>
-                <p class="lang-en">On iOS devices, you may optionally enable iCloud Sync to synchronize your ledger entries and categories across devices signed into the same Apple ID. When enabled:</p>
-                <ul>
-                    <li class="lang-en">Data is transmitted to and stored in Apple's CloudKit service</li>
-                    <li class="lang-en">Data is encrypted in transit and at rest using Apple's standard security measures</li>
-                    <li class="lang-en">You can disable iCloud Sync at any time; your local data will remain on your device</li>
-                    <li class="lang-en">iCloud Sync is disabled by default and must be explicitly turned on by you</li>
-                </ul>
-                <p class="lang-en">Apple's privacy policy governs the handling of data stored in your iCloud account.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>5. AI 辅助记账</h2>
+          <p><span class="tag">Android</span> AI 使用您配置的 OpenAI-compatible 提供商；模型配置和 API Key 以明文保存在本地键值存储，并在您主动导出模型配置时进入备份。<span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> 登录后使用 CyanLeaf 下发的模型、网关地址、密钥和额外请求头；网关密钥仅驻留内存，不持久化、不写日志。</p>
+          <p>发起 AI 回合时，应用可能向实际处理请求的 CyanLeaf 网关或模型提供商发送：当前消息和此前会话上下文、应用系统提示、设备时间与时区、启用的自定义规则、分类名称摘要、工具定义、模型生成的工具调用及其结果、工具所需账本/分类数据和需要模型读取的图片。</p>
+          <p><span class="tag">Android</span> 无本地文字识别时，图片会以图片数据传输给模型；<span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> 仅在模型需要读取图片时发送图片数据。远端服务按其隐私政策处理这些数据；请避免输入不必要的敏感信息。</p>
+          <div class="callout"><p>AI 工具可以直接创建、修改或删除账本记录，不会逐条等待您确认；模型输出也可能错误。请在使用后核对账本、分类、预算和余额结果。</p></div>
+        </div>
+        <div class="lang-en">
+          <h2>5. AI-assisted bookkeeping</h2>
+          <p>On <span class="tag">Android</span>, AI uses the OpenAI-compatible provider you configure; model configuration and API Keys are kept as plaintext in local key-value storage and enter a backup when you export model configuration. On <span class="tag">iOS</span> / <span class="tag">OpenHarmony</span>, the app uses the model, gateway address, key, and extra headers issued by CyanLeaf after sign-in; the gateway key exists only in memory and is never persisted or logged.</p>
+          <p>When an AI turn starts, the app may send the following to the CyanLeaf gateway or model provider that actually handles the request: the current message and prior conversation context, app system prompt, device time and time zone, enabled custom rules, category-name digest, tool definitions, model-generated tool calls and results, ledger/category data required by tools, and images the model must read.</p>
+          <p>On <span class="tag">Android</span>, when no local text recognition is available, the image is sent to the model as image data. On <span class="tag">iOS</span> / <span class="tag">OpenHarmony</span>, image data is sent only when the model needs to read it. Remote services process this data under their own privacy policies; avoid unnecessary sensitive information.</p>
+          <div class="callout"><p>AI tools can directly create, update, or delete ledger records without a per-record confirmation step, and model output may be wrong. Check ledger entries, categories, budgets, and balances after use.</p></div>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">AI 服务</h2>
-                <h2 class="lang-en">AI Services</h2>
-                <p class="lang-zh">AI 对话为完全可选功能，需要您主动配置兼容的模型提供商后才能使用。发送 AI 对话时，数据会传输到您指定的提供商 API 端点；我们无法访问您的 API Key 或对话数据。</p>
-                <p class="lang-en">AI chat is entirely optional and requires explicit compatible model provider configuration before use. When you send AI chat messages, data is transmitted to your chosen provider's API endpoint; we cannot access your API keys or conversation data.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>6. 图片、语音与临时文件</h2>
+          <p>聊天图片保存在应用支持目录的会话子目录（<code>ai_chat_images</code>）。会话快照移除图片二进制但保留本地图片引用；删除会话时，图片、快照及该会话记录一并删除。</p>
+          <ul>
+            <li><span class="tag">iOS</span> 分享扩展、相册、相机或“嘟嘎截屏记账”快捷指令产生的临时副本可能进入 App Group 的 <code>ShareOcrImages</code> 或临时目录；分享队列最多保留 5 个待处理会话，未被引用的文件约 10 分钟后清理，相机/选择图片的临时文件在读取后删除。</li>
+            <li><span class="tag">Android</span> 悬浮球截屏存于 <code>filesDir/floating_ball_images</code>，最多 5 个待处理会话，未被引用的文件约 10 分钟后清理；相机临时文件位于 <code>cacheDir/ai_chat_capture</code>，读取后删除。</li>
+            <li><span class="tag">OpenHarmony</span> 分享副本存于 <code>cacheDir/shared_image_inbox</code>，应用侧待处理会话队列最多保留 5 个会话；未被采用的副本约 10 分钟后清理，规范化副本在导入后删除。</li>
+          </ul>
+          <p>首次同意本政策前，应用不读取这些外部分享或悬浮球队列。图片文字识别由系统能力或模型完成；任何需要模型读取的图片都会发送给实际 AI 服务。</p>
+          <p>语音输入调用系统语音服务，可能联网处理；应用不保存录音，只保留最终转写文本。拍照、选图、导入和导出使用系统相机、相册选择器、文件选择器或分享扩展，不申请广泛存储权限。</p>
+        </div>
+        <div class="lang-en">
+          <h2>6. Images, voice, and temporary files</h2>
+          <p>Chat images are stored in per-conversation folders under the app support directory (<code>ai_chat_images</code>). Session snapshots remove image bytes but retain a local image reference; deleting a conversation deletes its images, snapshot, and records together.</p>
+          <ul>
+            <li><span class="tag">iOS</span> Temporary copies from the share extension, photo library, camera, or the “Duga Screenshot Ledger” shortcut may enter the App Group <code>ShareOcrImages</code> directory or temporary directory. The share queue keeps at most 5 pending sessions; unreferenced files are cleared after about 10 minutes, and camera/selected-image temporary files are deleted after reading.</li>
+            <li><span class="tag">Android</span> Floating-ball screenshots go to <code>filesDir/floating_ball_images</code>, with at most 5 pending sessions and unreferenced files cleared after about 10 minutes; camera temporary files go to <code>cacheDir/ai_chat_capture</code> and are deleted after reading.</li>
+            <li><span class="tag">OpenHarmony</span> Shared copies go to <code>cacheDir/shared_image_inbox</code>; the app-side pending-session queue keeps at most 5 sessions, unreferenced copies are cleared after about 10 minutes, and normalized copies are deleted after import.</li>
+          </ul>
+          <p>Before you first accept this policy, the app does not read these external-share or floating-ball queues. Image text recognition is performed by system capability or the model; any picture the model must read is sent to the actual AI service.</p>
+          <p>Voice input uses the system speech service, which may process audio online; the app does not retain recordings and keeps only the final transcript. Camera, photo, import, and export actions use the system camera, photo picker, file picker, or share extension, and the app does not request broad storage access.</p>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">语音识别</h2>
-                <h2 class="lang-en">Speech Recognition</h2>
-                <p class="lang-zh">本应用支持通过语音输入 AI 对话消息，使用设备端语音识别服务。iOS 端使用 Apple Siri 语音识别，Android 端使用平台内置语音服务，OpenHarmony 端使用设备本地语音识别引擎。录音数据在设备端或通过平台标准语音识别管道处理，应用本身不存储或传输语音数据（超出平台 SDK 本身行为的范围）。</p>
-                <p class="lang-en">The app supports voice input for AI chat messages using device speech recognition services. On iOS, this uses Apple's Siri speech recognition; on Android, it uses the platform's built-in speech service; on OpenHarmony, it uses the device's local speech recognition engine. Audio is processed on-device or through the platform's standard speech recognition pipeline and is not stored or transmitted by the app itself beyond what the platform SDK does.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>7. iCloud 同步 <span class="tag">iOS</span></h2>
+          <p>您可主动开启 iCloud 同步。同步内容为收支记录、分类、预算、余额快照、同步状态及同步元数据，保存于 Apple CloudKit 容器 <code>iCloud.com.soloyehaha.luanhua</code>，并在同一 Apple ID 的设备间同步。同步默认关闭；关闭后本地数据继续保留。</p>
+          <p>AI 会话、聊天图片、模型配置、账户令牌和内购票据不进入 iCloud。iCloud 的处理、传输加密和保留期限受 Apple 规则约束。</p>
+        </div>
+        <div class="lang-en">
+          <h2>7. iCloud Sync <span class="tag">iOS</span></h2>
+          <p>You may enable iCloud Sync. It synchronizes entries, categories, budgets, balance snapshots, sync state, and sync metadata through the Apple CloudKit container <code>iCloud.com.soloyehaha.luanhua</code> across devices signed into the same Apple ID. Sync is off by default; turning it off keeps local data.</p>
+          <p>AI sessions, chat images, model configuration, account tokens, and purchase tickets are not stored in iCloud. Apple's rules govern iCloud processing, transport encryption, and retention.</p>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">6. 如何保护您的个人信息</h2>
-                <h2 class="lang-en">6. How We Protect Personal Information</h2>
-                <p class="lang-zh">默认情况下，您的数据保存在设备本地，受设备系统安全机制保护。我们建议您为设备设置密码或生物识别锁，保持操作系统更新，并根据需要备份设备数据。</p>
-                <p class="lang-zh">我们会采取合理可行的措施，避免收集与功能无关的信息。对于 AI 提供商、iCloud、语音识别、文字识别等您主动使用的系统或第三方服务，其安全能力和数据处理规则由对应服务提供方负责。</p>
-                <p class="lang-en">By default, your data is stored locally on your device and protected by the device's system security mechanisms. We recommend setting a passcode or biometric lock, keeping your operating system updated, and backing up device data as needed.</p>
-                <p class="lang-en">We take reasonable measures to avoid collecting information unrelated to app features. For AI providers, iCloud, speech recognition, image text recognition, and other system or third-party services you actively use, the corresponding service provider is responsible for its security capabilities and data processing rules.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>8. 权限、后台能力与通知</h2>
+          <p>权限或系统能力仅在对应功能使用时由系统或功能入口请求；您可在系统设置撤回。</p>
+          <ul>
+            <li><span class="tag">iOS</span> 相机、麦克风和相册用于拍照、语音与选图；语音识别用于转写；通知仅用于 AI 回合完成或失败的本地提醒，不使用 APNs 远程推送。App Group 用于分享扩展和快捷指令交付图片；Apple 登录与 CloudKit 用于账户和 iCloud。AI 流式回合可能申请短期后台执行时间，系统到期后回合可能停止。</li>
+            <li><span class="tag">Android</span> <code>INTERNET</code> 用于联网；<code>RECORD_AUDIO</code> 用于语音；<code>SYSTEM_ALERT_WINDOW</code>、<code>FOREGROUND_SERVICE</code> 和 <code>FOREGROUND_SERVICE_SPECIAL_USE</code> 用于可选悬浮球；无障碍服务仅在双击悬浮球时截取一屏，不读取其他屏幕内容、不响应其他事件。悬浮球开启时有前台服务通知，其显示受系统版本和通知授权影响。相册/文件使用系统选择器，未声明广泛存储权限。</li>
+            <li><span class="tag">OpenHarmony</span> <code>INTERNET</code>、<code>VIBRATE</code>、<code>CAMERA</code>、<code>MICROPHONE</code>、<code>USE_FLOAT_BALL</code> 和 <code>CUSTOM_SCREEN_CAPTURE</code> 用于联网、触感、拍照、语音、悬浮球和用户主动触发的一次性截屏。应用未使用应用通知服务。</li>
+          </ul>
+          <p>Android 和 OpenHarmony 的悬浮球只处理用户主动触发的一张屏幕图片。权限名称和处理方式可能随系统版本变化，请以实际系统提示为准。</p>
+        </div>
+        <div class="lang-en">
+          <h2>8. Permissions, background capabilities, and notifications</h2>
+          <p>Permissions or system capabilities are requested by the system or a feature entry point only when needed, and can be revoked in system Settings.</p>
+          <ul>
+            <li><span class="tag">iOS</span> Camera, microphone, and photo library support photos, voice, and image selection; speech recognition handles transcription; notifications are local reminders when an AI turn finishes or fails, with no APNs remote push. App Group lets the share extension and shortcut deliver images; Sign in with Apple and CloudKit support accounts and iCloud. A streaming AI turn may request short background execution time, and the turn may stop when the system expires it.</li>
+            <li><span class="tag">Android</span> <code>INTERNET</code> supports networking and <code>RECORD_AUDIO</code> supports voice. <code>SYSTEM_ALERT_WINDOW</code>, <code>FOREGROUND_SERVICE</code>, and <code>FOREGROUND_SERVICE_SPECIAL_USE</code> support the optional floating ball. The accessibility service captures one screen only when the floating ball is double-tapped and does not read other screen content or respond to other events. A foreground-service notification is shown while the floating ball is on; its visibility depends on the OS version and notification authorization. Photos/files use system pickers, and no broad storage permission is declared.</li>
+            <li><span class="tag">OpenHarmony</span> <code>INTERNET</code>, <code>VIBRATE</code>, <code>CAMERA</code>, <code>MICROPHONE</code>, <code>USE_FLOAT_BALL</code>, and <code>CUSTOM_SCREEN_CAPTURE</code> support networking, haptics, photos, voice, the floating ball, and a one-shot user-triggered screenshot. The app does not use an app notification service.</li>
+          </ul>
+          <p>The Android and OpenHarmony floating balls process only one screen image that the user actively requests. Permission names and handling may vary by OS version; follow the actual system prompts.</p>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">7. 管理您的个人信息</h2>
-                <h2 class="lang-en">7. Managing Your Personal Information</h2>
-                <p class="lang-zh">您可以在应用内查看、修改或删除记账记录、分类、主页信息卡片和布局、AI 提供商、人格、规则、会话历史、主题、字体、自定义声音文件、声音和振动等配置。</p>
-                <p class="lang-zh">您可以在系统设置中撤回相机、存储权限、录音、通知等权限；可以在应用内关闭 iCloud 同步；可以删除已配置的 AI 提供商以停止向该提供商发送新的 AI 请求。</p>
-                <p class="lang-zh">本应用无需账号注册，因此不提供账号注销功能。您可以通过设备系统设置清除应用数据，或卸载应用来删除保存在设备本地的数据；iCloud 中已同步的数据需按 Apple iCloud/CloudKit 的规则管理。</p>
-                <p class="lang-en">You can view, edit, or delete ledger entries, categories, home info cards and layouts, AI providers, personas, rules, conversation history, themes, fonts, audio, sound settings, and vibration settings in the app.</p>
-                <p class="lang-en">You can revoke permissions such as camera, photo library, microphone, speech recognition, and notifications in system Settings; disable iCloud Sync in the app; or delete configured AI providers to stop sending new AI requests to that provider.</p>
-                <p class="lang-en">This app does not require account registration, so account cancellation is not applicable. You can clear app data in system Settings or uninstall the app to delete data stored locally on your device. Data already synchronized to iCloud must be managed according to Apple iCloud/CloudKit rules.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>9. 内购与额度 <span class="tag">iOS</span> <span class="tag">OpenHarmony</span></h2>
+          <p>CyanLeaf 额度充值仅适用于 iOS 和 OpenHarmony：iOS 使用 App Store 内购，OpenHarmony 使用华为应用内支付；Android 不提供账户、额度或内购。</p>
+          <p>商店负责付款和交易凭证；应用与 CyanLeaf 处理商品标识、交易标识、票据验签、订单状态、额度和用量记录。待验签票据会暂存在本地，成功入账或账户注销后按规则清除。退款渠道和条件以对应商店规则及适用法律为准。</p>
+        </div>
+        <div class="lang-en">
+          <h2>9. Purchases and credits <span class="tag">iOS</span> <span class="tag">OpenHarmony</span></h2>
+          <p>CyanLeaf credit purchases exist only on iOS and OpenHarmony: iOS uses App Store In-App Purchase, and OpenHarmony uses Huawei In-App Purchases. Android offers no account, credits, or purchases.</p>
+          <p>The store handles payment and transaction evidence; the app and CyanLeaf process product identifiers, transaction identifiers, receipt verification, order status, credits, and usage records. Pending tickets are stored locally and cleared after successful credit or account deletion under the applicable rules. Store rules and applicable law govern refund channels and conditions.</p>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">8. 信息存储地点及期限</h2>
-                <h2 class="lang-en">8. Information Storage Location and Retention</h2>
-                <p class="lang-zh">默认情况下，信息存储在您当前使用设备的本地存储中。您主动开启 iOS iCloud 同步后，相关记账数据会传输并保存至 Apple iCloud/CloudKit。您主动使用 AI 对话时，必要信息会传输至您配置的模型提供商 API 端点。</p>
-                <p class="lang-zh">除法律法规另有规定外，本地数据会保留至您主动删除、清除应用数据或卸载应用为止。AI 提供商、Apple iCloud/CloudKit 和操作系统服务中的保存期限，以对应服务提供方规则为准。</p>
-                <p class="lang-en">By default, information is stored locally on the device you use. After you enable iOS iCloud Sync, relevant ledger data is transmitted to and stored in Apple iCloud/CloudKit. When you use AI chat, necessary information is transmitted to the model provider API endpoint you configured.</p>
-                <p class="lang-en">Unless otherwise required by law, local data is retained until you delete it, clear app data, or uninstall the app. Retention periods for AI providers, Apple iCloud/CloudKit, and operating system services are governed by the corresponding service provider's rules.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>10. 共享与第三方服务</h2>
+          <p>本应用未集成第三方广告、分析或追踪 SDK，不出售个人信息。为提供您主动选择的功能，可能涉及：</p>
+          <ul>
+            <li><span class="tag">Apple</span>（iOS）：Apple 登录、iCloud/CloudKit、App Store 内购，以及系统语音、文字识别、本地通知和快捷指令。</li>
+            <li><span class="tag">华为</span>（OpenHarmony）：华为账号登录、应用内支付、系统语音/识别、悬浮球与截屏能力。</li>
+            <li><span class="tag">CyanLeaf</span>（iOS / OpenHarmony）：账户、钱包、订单、额度流水、内购验签和 AI 网关。</li>
+            <li><span class="tag">模型提供商或 CyanLeaf 配置的 AI 服务</span>（全平台）：处理 AI 请求及随请求发送的账本、历史会话和图片数据。</li>
+            <li>系统选择器、分享扩展和系统语音服务：仅在您使用对应功能时处理所选内容。</li>
+          </ul>
+          <p>这些服务可能按其隐私政策处理与账户关联的数据。请在使用前查阅相应服务提供方的规则。</p>
+        </div>
+        <div class="lang-en">
+          <h2>10. Sharing and third-party services</h2>
+          <p>The app contains no third-party advertising, analytics, or tracking SDKs and does not sell personal information. Features you choose may involve:</p>
+          <ul>
+            <li><span class="tag">Apple</span> (iOS): Sign in with Apple, iCloud/CloudKit, App Store purchases, system speech, text recognition, local notifications, and Shortcuts.</li>
+            <li><span class="tag">Huawei</span> (OpenHarmony): Huawei account sign-in, in-app purchases, system speech/recognition, and floating-ball and screenshot capabilities.</li>
+            <li><span class="tag">CyanLeaf</span> (iOS / OpenHarmony): accounts, wallet, orders, credit activity, purchase verification, and AI gateway.</li>
+            <li><span class="tag">Model providers or the AI service configured by CyanLeaf</span> (all platforms): AI requests and the ledger, prior-session, and image data sent with them.</li>
+            <li>System pickers, share extensions, and system speech services: process selected content only when you use the relevant feature.</li>
+          </ul>
+          <p>These services may process account-linked data under their own privacy policies. Review their terms before use.</p>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">9. 如何联系我们</h2>
-                <h2 class="lang-en">9. Contact Us</h2>
-                <p class="lang-zh">您可通过以下方式联系我们，并行使您的相关权利，我们会尽快回复。</p>
-                <p class="lang-zh">电子邮箱：yehaha@petalmail.com</p>
-                <p class="lang-zh">如果您对我们的回复不满意，特别是当您认为个人信息处理行为损害了您的合法权益时，您还可以通过向有管辖权的人民法院提起诉讼、向行业自律协会或政府相关管理机构投诉等外部途径解决。</p>
-                <p class="lang-en">You may contact us through the following method and exercise your related rights. We will respond as soon as reasonably possible.</p>
-                <p class="lang-en">Email: yehaha@petalmail.com</p>
-                <p class="lang-en">If you are not satisfied with our response, especially if you believe our personal information processing has harmed your lawful rights and interests, you may also seek resolution through external channels such as filing a lawsuit with a competent court or making a complaint to an industry self-regulatory association or government authority.</p>
-            </section>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>11. 如何保护您的个人信息</h2>
+          <p>账本和设置位于应用沙盒，并受设备锁屏加密和系统安全机制保护。我们建议您设置设备密码或生物识别锁、保持系统更新，并谨慎保管导出的备份。</p>
+          <div class="callout"><p><span class="tag">Android</span> API Key 和 <span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> CyanLeaf 令牌目前以明文保存在本地应用偏好/键值存储中，未使用系统安全存储；用户备份是明文 JSON。任何能读取设备应用数据或备份文件的人都可能读取这些凭据。</p></div>
+          <p>应用未集成广告、分析或追踪 SDK，并尽量避免处理与功能无关的信息。模型提供商、CyanLeaf、Apple、华为及系统服务的安全性由其各自负责。</p>
+        </div>
+        <div class="lang-en">
+          <h2>11. How we protect personal information</h2>
+          <p>Ledger data and settings live in the app sandbox and are protected by device lock encryption and system security mechanisms. We recommend a device passcode or biometric lock, current system updates, and careful handling of exported backups.</p>
+          <div class="callout"><p>On <span class="tag">Android</span>, API Keys and on <span class="tag">iOS</span> / <span class="tag">OpenHarmony</span>, CyanLeaf tokens are currently stored as plaintext in local app preferences/key-value storage, not in system secure storage; user backups are plaintext JSON. Anyone who can read the device's app data or a backup file may read these credentials.</p></div>
+          <p>The app contains no advertising, analytics, or tracking SDKs and minimizes information unrelated to its features. Model providers, CyanLeaf, Apple, Huawei, and system services are responsible for their own security.</p>
+        </div>
+      </section>
 
-            <section class="section">
-                <h2 class="lang-zh">政策更新</h2>
-                <h2 class="lang-en">Policy Updates</h2>
-                <p class="lang-zh">我们可能会根据应用功能、法律法规或监管要求更新本隐私声明。更新后，我们会在应用内和隐私政策网站展示新的更新日期和生效日期。</p>
-                <p class="lang-en">We may update this privacy statement based on app features, laws and regulations, or regulatory requirements. After an update, we will display the new last-updated date and effective date in the app and on the privacy policy website.</p>
-            </section>
-        </main>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>12. 权利与删除</h2>
+          <p>您可以在应用内查看、修改或删除收支记录、分类、预算、余额快照、规则、主题、模型配置和 AI 会话；删除会话会删除对应图片和快照。您可以在系统设置撤回相机、相册、麦克风、语音识别、通知、悬浮窗或无障碍等权限，并关闭 iCloud 同步。清除应用数据或卸载应用会删除本地数据，也会撤回首次隐私确认。</p>
+          <p><span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> 用户可在账户页退出登录或注销 CyanLeaf 账号；注销会清除账户登录会话和待核验票据，但不删除本地账本、iCloud 数据或 Android 自定义模型配置。iCloud 和远端账户数据需通过 Apple、华为或 CyanLeaf 管理。您也可以联系我们行使适用法律规定的查询、更正、删除或撤回同意等权利。</p>
+        </div>
+        <div class="lang-en">
+          <h2>12. Rights and deletion</h2>
+          <p>You can view, edit, or delete entries, categories, budgets, balance snapshots, rules, themes, model configuration, and AI sessions in the app; deleting a session also deletes its images and snapshot. You can revoke camera, photo library, microphone, speech recognition, notifications, overlay, or accessibility permissions in system Settings and disable iCloud Sync. Clearing app data or uninstalling the app deletes local data and withdraws the initial privacy acceptance.</p>
+          <p>On <span class="tag">iOS</span> / <span class="tag">OpenHarmony</span>, you can sign out or delete the CyanLeaf account from the account page. Deletion clears the account sign-in session and pending tickets, but does not delete the local ledger, iCloud data, or Android custom model configuration. iCloud and remote account data must be managed through Apple, Huawei, or CyanLeaf. You may also contact us to exercise rights of access, correction, deletion, or withdrawal of consent under applicable law.</p>
+        </div>
+      </section>
 
-        <footer class="footer">
-            <p class="lang-zh">&copy; 2026 嘟嘎记账. 保留所有权利.</p>
-            <p class="lang-zh">本应用尊重并保护用户隐私</p>
-            <p class="lang-en">&copy; 2026 DugaLedger. All rights reserved.</p>
-            <p class="lang-en">This app respects and protects user privacy</p>
-        </footer>
-    </div>
+      <section class="section">
+        <div class="lang-zh">
+          <h2>13. 对未成年人的保护</h2>
+          <p>我们非常重视对未成年人个人信息的保护。嘟嘎记账不是专门面向儿童的应用，也不主动收集儿童个人信息。</p>
+          <p>如果您是未成年人，请在父母或其他监护人同意和指导下使用本应用。如果您是不满十四周岁儿童的父母或其他监护人，请监督并指导儿童使用本应用，避免在记账内容、AI 辅助记账对话、规则或自定义配置中输入不必要的个人敏感信息。</p>
+        </div>
+        <div class="lang-en">
+          <h2>13. Protection of minors</h2>
+          <p>We take the protection of minors' personal information seriously. DugaLedger is not designed specifically for children and does not intentionally collect children's personal information.</p>
+          <p>If you are a minor, use the app with the consent and guidance of a parent or guardian. If you are the parent or guardian of a child under 14, supervise and guide the child's use, and avoid unnecessary sensitive personal information in ledger content, AI conversations, rules, or custom configuration.</p>
+        </div>
+      </section>
 
-    <script>
-        function switchLanguage(lang) {
-            const isEnglish = lang === 'en';
-            document.body.classList.toggle('en', isEnglish);
-            document.documentElement.lang = isEnglish ? 'en' : 'zh-CN';
-            document.getElementById('btn-zh').classList.toggle('active', !isEnglish);
-            document.getElementById('btn-en').classList.toggle('active', isEnglish);
-            document.title = isEnglish ? 'DugaLedger - Privacy Policy' : '嘟嘎记账 - 隐私政策';
-            localStorage.setItem('preferredLanguage', lang);
+      <section class="section">
+        <div class="lang-zh">
+          <h2>14. 信息存储地点及期限</h2>
+          <p>本地账本和设置保存在设备上，直至您删除、清除应用数据或卸载应用。AI 会话、会话索引、仅界面记录和聊天图片按最近使用保留最多 10 个会话；超过上限时，最早会话及其快照、界面记录和图片会自动删除，您主动删除会话时也会同步删除。外部分享/悬浮球的待处理会话队列最多保留 5 个会话；未被引用或采用的临时文件约 10 分钟后清理，或在处理完成后删除。备份保存在您选择的位置，由您管理。</p>
+          <p>iCloud 数据保存在 Apple CloudKit，期限由 Apple 规则控制。<span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> 的账户、钱包、订单、额度流水和 AI 数据由 CyanLeaf 及模型提供商按其规则保存；待验签票据在成功入账或账号注销后清除。</p>
+        </div>
+        <div class="lang-en">
+          <h2>14. Storage location and retention</h2>
+          <p>Local ledger data and settings remain on the device until you delete them, clear app data, or uninstall the app. AI sessions, the session index, UI-only records, and chat images are kept for at most the 10 most recently used sessions; beyond that limit, the oldest session and its snapshot, UI records, and images are deleted automatically, and deleting a session also removes them together. External-share and floating-ball pending-session queues keep at most 5 sessions; temporary files that are unreferenced or not adopted are cleared after about 10 minutes, or deleted after processing. Backups remain at the location you choose and are managed by you.</p>
+          <p>iCloud data is stored in Apple CloudKit under Apple's rules. On <span class="tag">iOS</span> / <span class="tag">OpenHarmony</span>, CyanLeaf and model providers retain account, wallet, order, credit activity, and AI data under their rules; pending tickets are cleared after successful credit or account deletion.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>15. 联系我们</h2>
+          <p>个人信息处理者为嘟嘎记账团队。您可以通过以下方式联系我们，行使查询、更正、删除、撤回同意等适用法律规定的权利；我们会尽快回复。</p>
+          <p><strong>电子邮箱：</strong>yehaha@petalmail.com</p>
+          <p>如果您对我们的回复不满意，特别是认为个人信息处理行为损害了您的合法权益，还可以向有管辖权的人民法院提起诉讼，或向相关监管机构、行业自律组织投诉。</p>
+        </div>
+        <div class="lang-en">
+          <h2>15. Contact us</h2>
+          <p>The personal information controller is the DugaLedger Team. You may contact us to exercise rights of access, correction, deletion, or withdrawal of consent under applicable law; we will respond as soon as reasonably possible.</p>
+          <p><strong>Email:</strong> yehaha@petalmail.com</p>
+          <p>If you are not satisfied with our response, especially if you believe our processing has harmed your lawful rights, you may also file a lawsuit with a competent court or complain to a relevant regulator or industry self-regulatory organization.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>16. 政策更新</h2>
+          <p>我们可能会根据应用功能、法律法规或监管要求更新本隐私声明。更新后，我们会在应用内和隐私政策网站展示新的更新日期和生效日期。</p>
+          <p><strong>生效日期：</strong>2026年10月26日</p>
+        </div>
+        <div class="lang-en">
+          <h2>16. Policy updates</h2>
+          <p>We may update this privacy statement based on app features, laws and regulations, or regulatory requirements. After an update, we will display the new last-updated date and effective date in the app and on the privacy policy website.</p>
+          <p><strong>Effective date:</strong> October 26, 2026</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="lang-zh">
+        <p>&copy; 2026 嘟嘎记账团队。保留所有权利。</p>
+        <p><a href="terms.html">查看用户协议</a></p>
+      </div>
+      <div class="lang-en">
+        <p>&copy; 2026 DugaLedger Team. All rights reserved.</p>
+        <p><a href="terms.html">View Terms of Service</a></p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function updateLanguageLinks(isEnglish) {
+      document.querySelectorAll('a[href]').forEach((link) => {
+        const rawHref = link.getAttribute('href');
+        if (!rawHref || rawHref.startsWith('#') || rawHref.startsWith('mailto:')) return;
+        const url = new URL(rawHref, window.location.href);
+        if (!url.pathname.endsWith('/index.html') && !url.pathname.endsWith('/terms.html')) return;
+        if (isEnglish) {
+          url.searchParams.set('lang', 'en');
+        } else {
+          url.searchParams.delete('lang');
         }
+        link.setAttribute('href', url.pathname.split('/').pop() + url.search + url.hash);
+      });
+    }
 
-        window.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('preferredLanguage') || 'zh';
-            switchLanguage(savedLang);
-        });
-    </script>
+    function switchLanguage(lang, updateUrl = true) {
+      const isEnglish = lang === 'en';
+      document.body.classList.toggle('en', isEnglish);
+      document.documentElement.lang = isEnglish ? 'en' : 'zh-CN';
+      document.getElementById('btn-zh').classList.toggle('active', !isEnglish);
+      document.getElementById('btn-en').classList.toggle('active', isEnglish);
+      document.title = isEnglish
+        ? 'DugaLedger - Privacy Policy'
+        : '嘟嘎记账 - 隐私政策';
+      updateLanguageLinks(isEnglish);
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        if (isEnglish) {
+          url.searchParams.set('lang', 'en');
+        } else {
+          url.searchParams.delete('lang');
+        }
+        window.history.replaceState(null, '', url);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const lang = new URLSearchParams(window.location.search).get('lang') === 'en'
+        ? 'en'
+        : 'zh';
+      switchLanguage(lang, false);
+    });
+  </script>
 </body>
 </html>

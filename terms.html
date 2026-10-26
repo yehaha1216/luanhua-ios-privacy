@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>嘟嘎记账 - 用户协议 | DugaLedger Terms of Service</title>
+  <meta name="description" content="嘟嘎记账用户协议，覆盖本地记账、AI、平台账号、CyanLeaf Credits、商店支付与退款、账号注销和责任边界。">
+  <link rel="icon" type="image/png" href="icon.png">
+  <style>
+    :root {
+      --ink: #24332b;
+      --muted: #59675f;
+      --paper: #fffdf8;
+      --canvas: #f6f2e9;
+      --line: #ded5c5;
+      --leaf: #315c3f;
+      --leaf-soft: #e8f0e8;
+      --warn-soft: #fff3df;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+    a { color: var(--leaf); }
+    .container {
+      max-width: 940px;
+      margin: 0 auto;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 20px 58px rgba(64, 48, 28, 0.13);
+      overflow: hidden;
+    }
+    .header {
+      position: relative;
+      padding: 46px 32px 34px;
+      text-align: center;
+      background: #eef0e5;
+      border-bottom: 1px solid #d9ddcd;
+    }
+    .language-switcher {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      gap: 8px;
+    }
+    .language-switcher button {
+      border: 1px solid #7d896d;
+      background: transparent;
+      color: #3d4834;
+      padding: 7px 12px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .language-switcher button.active { background: #3e4b36; color: #fff; }
+    .app-icon {
+      display: block;
+      width: 94px;
+      height: 94px;
+      margin: 0 auto 18px;
+      border-radius: 22px;
+      box-shadow: 0 10px 24px rgba(48, 66, 52, 0.22);
+    }
+    h1 { margin: 0 0 7px; color: #25301f; font-size: 32px; line-height: 1.25; }
+    .subtitle { margin: 0; color: #606b55; font-size: 16px; }
+    .top-nav { padding: 14px 24px 0; text-align: center; font-size: 14px; }
+    .top-nav a {
+      display: inline-block;
+      margin: 0 8px;
+      padding: 5px 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .top-nav a[aria-current="page"] { background: #f0f1e7; }
+    .content { padding: 34px 32px 12px; }
+    .notice, .callout { padding: 17px 19px; border-radius: 11px; }
+    .notice {
+      margin-bottom: 28px;
+      border-left: 4px solid #748561;
+      background: #f4f6ec;
+    }
+    .callout {
+      margin: 14px 0;
+      border: 1px solid #e1d3b2;
+      background: var(--warn-soft);
+      color: #5d4724;
+    }
+    .notice p:last-child, .callout p:last-child, .section p:last-child, .section ul:last-child { margin-bottom: 0; }
+    .section { margin-bottom: 34px; }
+    .section h2 { margin: 0 0 12px; color: #41502f; font-size: 22px; line-height: 1.35; }
+    .section p, .section li { color: #4c5546; font-size: 16px; }
+    .section p { margin: 0 0 12px; }
+    .section ul { margin: 8px 0 14px 22px; padding: 0; }
+    .section li { margin-bottom: 8px; }
+    .tag {
+      display: inline-block;
+      margin: 0 2px;
+      padding: 0 5px;
+      border: 1px solid #c7ceb8;
+      border-radius: 5px;
+      background: #f5f6ee;
+      color: #465238;
+      font-size: 0.82em;
+      font-weight: 700;
+      line-height: 1.55;
+      white-space: nowrap;
+    }
+    .footer {
+      padding: 24px 32px 32px;
+      border-top: 1px solid #ece4d8;
+      color: #667267;
+      text-align: center;
+      font-size: 14px;
+    }
+    .lang-en { display: none; }
+    body.en .lang-zh { display: none; }
+    body.en .lang-en { display: block; }
+    @media (max-width: 720px) {
+      body { padding: 10px; }
+      .header { padding: 58px 18px 28px; }
+      h1 { font-size: 27px; }
+      .content { padding: 26px 18px 8px; }
+      .section h2 { font-size: 19px; }
+      .top-nav { padding-left: 10px; padding-right: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="language-switcher" aria-label="Language / 语言">
+        <button type="button" id="btn-zh" class="active" onclick="switchLanguage('zh')">中文</button>
+        <button type="button" id="btn-en" onclick="switchLanguage('en')">English</button>
+      </div>
+      <img src="icon.png" alt="嘟嘎记账应用图标 / DugaLedger app icon" class="app-icon">
+      <div class="lang-zh">
+        <h1>嘟嘎记账</h1>
+        <p class="subtitle">用户协议</p>
+      </div>
+      <div class="lang-en">
+        <h1>DugaLedger</h1>
+        <p class="subtitle">Terms of Service</p>
+      </div>
+    </header>
+
+    <nav class="top-nav lang-zh" aria-label="页面导航">
+      <a href="index.html">隐私政策</a>
+      <a href="terms.html" aria-current="page">用户协议</a>
+    </nav>
+    <nav class="top-nav lang-en" aria-label="Page navigation">
+      <a href="index.html">Privacy Policy</a>
+      <a href="terms.html" aria-current="page">Terms of Service</a>
+    </nav>
+
+    <main class="content">
+      <div class="notice lang-zh">
+        <p><strong>更新日期：</strong>2026年10月26日</p>
+        <p><strong>生效日期：</strong>2026年10月26日</p>
+      </div>
+      <div class="notice lang-en">
+        <p><strong>Last updated:</strong> October 26, 2026</p>
+        <p><strong>Effective date:</strong> October 26, 2026</p>
+      </div>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>协议说明</h2>
+          <p>本协议是你与嘟嘎记账团队（下称“我们”）之间关于使用嘟嘎记账（DugaLedger，下称“本应用”）的约定。使用本应用、AI 辅助记账或购买额度，即表示你已阅读并同意本协议与<a href="index.html">《隐私政策》</a>。</p>
+          <p>涉及 App Store 或华为应用内支付的付款、退款和争议处理时，商店规则及适用法律的强制性规定优先。</p>
+        </div>
+        <div class="lang-en">
+          <h2>About these terms</h2>
+          <p>These terms govern your use of DugaLedger (the “App”) and form an agreement between you and the DugaLedger Team (“we”). Using the App, AI-assisted bookkeeping, or purchasing credits means you have read and accepted these terms and the <a href="index.html">Privacy Policy</a>.</p>
+          <p>For payment, refunds, and disputes involving App Store or Huawei In-App Purchases, the store rules and mandatory applicable law prevail.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>1. 服务内容</h2>
+          <p>本应用提供本地记账、统计、预算、余额、主题、数据导入导出、语音输入、图片识别和可选 AI 辅助记账。<span class="tag">iOS</span> 支持可选 iCloud 同步与“嘟嘎截屏记账”快捷指令；<span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> 在登录 Apple / 华为账号并连接 CyanLeaf 后使用 AI 和额度服务；<span class="tag">Android</span> 无需账号，也不提供 CyanLeaf 额度。</p>
+          <p>部分系统能力、第三方服务或模型可能因地区、设备、版本或服务商状态而不可用。</p>
+        </div>
+        <div class="lang-en">
+          <h2>1. What the service covers</h2>
+          <p>The App provides local bookkeeping, statistics, budgets, balances, themes, data import/export, voice input, image recognition, and optional AI-assisted bookkeeping. <span class="tag">iOS</span> supports optional iCloud Sync and the “Duga Screenshot Ledger” shortcut. On <span class="tag">iOS</span> / <span class="tag">OpenHarmony</span>, AI and credits are available after signing in with Apple / Huawei and connecting to CyanLeaf. <span class="tag">Android</span> requires no account and offers no CyanLeaf credits.</p>
+          <p>Some system capabilities, third-party services, or models may be unavailable by region, device, version, or provider status.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>2. 本地数据与备份</h2>
+          <p>账本和设置默认保存在你的设备上。你应自行核对、维护并备份重要数据；删除会话、清除应用数据、卸载应用或设备故障可能导致本地数据丢失。</p>
+          <p>导出的备份是明文 JSON，可包含账本、分类、预算、余额快照、主题、AI 规则、自动分类和 AI 显示设置，并带有格式版本、导出平台、应用版本和导出时间等元数据；Android 备份还可包含自定义模型配置，其中 API Key 为明文，取得文件的人可能读取该密钥。导入备份可能覆盖现有数据，请确认来源并妥善保管或删除备份文件。</p>
+          <div class="callout"><p>导出包含模型配置的备份前，应用会提示 API Key 风险；只有确认“仍要导出”后才会写入文件，取消则中止。</p></div>
+        </div>
+        <div class="lang-en">
+          <h2>2. Local data and backups</h2>
+          <p>Ledger data and settings are stored on your device by default. You are responsible for checking, maintaining, and backing up important data; deleting sessions, clearing app data, uninstalling the App, or device failure may cause local data loss.</p>
+          <p>Exported backups are plaintext JSON and may contain ledger data, categories, budgets, balance snapshots, themes, AI rules, auto-category settings, and AI display settings, with metadata such as the format version, export platform, app version, and export time. Android backups may also contain custom model configuration, whose API Key is plaintext, so anyone who obtains the file may read that key. Importing a backup may overwrite current data; verify its source and securely store or delete the file.</p>
+          <div class="callout"><p>Before exporting a backup with model configuration, the App warns about the API Key risk. The file is written only after you confirm “Export anyway”; cancel aborts the export.</p></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>3. AI 辅助记账</h2>
+          <p>AI 辅助记账是可选功能。<span class="tag">Android</span> 使用你配置的兼容模型提供商；<span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> 使用 CyanLeaf 下发的 AI 网关配置。</p>
+          <p>AI 工具可以直接创建、修改或删除账本记录，不会逐条等待你确认；模型输出可能不准确、不完整或不符合预期，仅供参考。你应在使用后核对账本、分类、预算和余额，并对基于输出作出的决定负责。</p>
+          <p>请勿输入违法、侵权或不必要的敏感信息。模型费用、可用性和数据处理还受 CyanLeaf 或相应模型提供商的规则约束。</p>
+        </div>
+        <div class="lang-en">
+          <h2>3. AI-assisted bookkeeping</h2>
+          <p>AI-assisted bookkeeping is optional. <span class="tag">Android</span> uses the compatible model provider you configure; <span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> use the AI gateway configuration issued by CyanLeaf.</p>
+          <p>AI tools can directly create, update, or delete ledger records without a per-record confirmation step. Model output may be inaccurate, incomplete, or unexpected and is for reference only. Check ledger entries, categories, budgets, and balances after use, and you are responsible for decisions based on the output.</p>
+          <p>Do not enter unlawful, infringing, or unnecessary sensitive information. Model fees, availability, and data processing are also subject to CyanLeaf or the relevant model provider's rules.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>4. 平台账号、注销与数据</h2>
+          <p><span class="tag">Android</span> 无需账号。<span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> 的账号由 Apple / 华为登录和 CyanLeaf 账户共同构成。你应妥善保护设备和账号，不得出借、转让或冒用他人账号。</p>
+          <p>登录时，应用会向 CyanLeaf 发送身份凭据、设备标识（iOS IDFV / OpenHarmony ODID）和应用版本。退出登录会清除本地账户登录会话并锁定 AI。</p>
+          <p><span class="tag">iOS</span> / <span class="tag">OpenHarmony</span> 用户可在账户页注销 CyanLeaf 账号。注销会清除账户会话和待核验票据，未使用的额度无法恢复；本地账本、iCloud 数据及 Android 自定义模型配置不会因注销而删除。iCloud 数据和远端平台账户数据需按 Apple、华为或 CyanLeaf 的规则单独管理。</p>
+        </div>
+        <div class="lang-en">
+          <h2>4. Platform accounts, deletion, and data</h2>
+          <p><span class="tag">Android</span> requires no account. On <span class="tag">iOS</span> / <span class="tag">OpenHarmony</span>, the account combines Apple / Huawei sign-in and a CyanLeaf account. Safeguard your device and account, and do not lend, transfer, or impersonate another account.</p>
+          <p>During sign-in, the App sends CyanLeaf identity credentials, a device identifier (IDFV on iOS / ODID on OpenHarmony), and the app version. Signing out clears the local account sign-in session and locks AI.</p>
+          <p>On <span class="tag">iOS</span> / <span class="tag">OpenHarmony</span>, you can delete the CyanLeaf account from the account page. Deletion clears the account session and pending tickets, and unused credits cannot be restored; it does not delete the local ledger, iCloud data, or Android custom model configuration. iCloud data and remote platform account data must be managed separately under Apple, Huawei, or CyanLeaf rules.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>5. AI 辅助记账额度与计费</h2>
+          <p>CyanLeaf 额度仅适用于 <span class="tag">iOS</span> 和 <span class="tag">OpenHarmony</span>。额度以 Credits 显示，1 Credit 等于 10000 后端额度单位；每次 AI 请求按实际模型和用量扣减，不同模型消耗不同。剩余额度、订单和额度流水可在账户页查看。</p>
+          <p>Credits 不是法定货币，不可提现、转让或跨账号转移。</p>
+        </div>
+        <div class="lang-en">
+          <h2>5. AI-assisted bookkeeping credits and billing</h2>
+          <p>CyanLeaf credits exist only on <span class="tag">iOS</span> and <span class="tag">OpenHarmony</span>. Credits are displayed in Credits, where 1 Credit equals 10,000 backend quota units. Each AI request deducts based on the actual model and usage, and different models consume different amounts. Remaining credits, orders, and credit activity appear on the account page.</p>
+          <p>Credits are not legal currency and cannot be withdrawn, transferred, or moved across accounts.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>6. 充值与到账</h2>
+          <p>充值通过 App Store 内购（<span class="tag">iOS</span>）或华为应用内支付（<span class="tag">OpenHarmony</span>）完成，商品名称与价格以商店页面为准。付款成功后由服务端验签入账；网络异常时可稍后重试，同一笔交易重复提交不会重复入账。</p>
+        </div>
+        <div class="lang-en">
+          <h2>6. Purchases</h2>
+          <p>Top-ups use App Store In-App Purchase (<span class="tag">iOS</span>) or Huawei In-App Purchases (<span class="tag">OpenHarmony</span>); product names and prices are those shown by the store. After payment, the server verifies the receipt before crediting. You may retry after a network error, and submitting the same transaction again does not credit it twice.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>7. 退款</h2>
+          <p>AI 辅助记账额度属于虚拟商品，充值成功后不支持退款（法律另有规定除外）。若出现重复扣款、付款后未到账等情况，<span class="tag">iOS</span> 可通过 App Store 的购买记录申请退款，<span class="tag">OpenHarmony</span> 可通过华为应用内支付客服申请，也可以联系本应用客服协助核对订单。</p>
+          <p>退款渠道、时限和条件以对应商店规则及适用法律为准；商店规则与法律强制性规定优先于本节。</p>
+        </div>
+        <div class="lang-en">
+          <h2>7. Refunds</h2>
+          <p>AI-assisted bookkeeping credits are virtual goods and are non-refundable after successful purchase unless required by law. For duplicate charges or payment that did not arrive, <span class="tag">iOS</span> users may request a refund through App Store purchase history, <span class="tag">OpenHarmony</span> users may contact Huawei In-App Purchase support, and either may contact app support for order checking.</p>
+          <p>Store rules and applicable law govern refund channels, deadlines, and conditions, and prevail over this section.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>8. 未成年人</h2>
+          <p>未满 18 周岁的用户应在监护人同意并指导下使用本应用；充值额度前应取得监护人同意。监护人可联系我们处理误充值的退款申请。</p>
+        </div>
+        <div class="lang-en">
+          <h2>8. Minors</h2>
+          <p>Users under 18 should use the App with parental or guardian consent and guidance, and must obtain that consent before purchasing credits. Guardians may contact us about refund requests for mistaken purchases.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>9. 使用规范</h2>
+          <p>你不得利用本应用从事违法活动、生成违法或侵权内容、绕过计费或访问控制、攻击或干扰服务、批量自动化滥用、侵犯他人权益，或将额度用于本应用之外。</p>
+          <p>由你输入、导出或分享的内容及由此产生的后果由你负责；发现违法或滥用行为时，我们可依法限制或终止相关服务。</p>
+        </div>
+        <div class="lang-en">
+          <h2>9. Acceptable use</h2>
+          <p>You must not use the App for unlawful activity, generate unlawful or infringing content, bypass billing or access controls, attack or disrupt services, engage in abusive automation at scale, infringe others' rights, or use credits outside the App.</p>
+          <p>You are responsible for content you enter, export, or share and for its consequences. If we identify unlawful or abusive activity, we may restrict or terminate the relevant service as permitted by law.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>10. 服务可用性与责任边界</h2>
+          <p>本应用按现状提供。我们会合理维护其可用性和安全性，但不保证服务不中断、无错误或满足特定目的。我们可能因维护、合规、第三方服务调整或产品规划变更、暂停或终止部分功能。第三方平台、模型提供商、商店、网络和设备故障造成的处理延迟或数据差异，由相应服务方按其规则负责。</p>
+          <p>AI 输出不构成法律、财务、医疗或其他专业建议；你应自行核对并承担基于输出作出的决定。对因你未妥善保存备份、泄露 API Key 或账户凭据、设备丢失或被他人访问应用数据造成的损失，我们会在法律允许的范围内按相应责任规则处理。适用法律不允许排除或限制的责任不受本节影响。</p>
+        </div>
+        <div class="lang-en">
+          <h2>10. Availability and responsibility</h2>
+          <p>The App is provided as is. We will reasonably maintain availability and security but do not guarantee uninterrupted or error-free operation or fitness for a particular purpose. We may change, suspend, or discontinue some features for maintenance, compliance, third-party service changes, or product planning. Third-party platforms, model providers, stores, networks, and devices are responsible for delays or data differences under their rules.</p>
+          <p>AI output is not legal, financial, medical, or other professional advice; you are responsible for checking it and for decisions based on it. For loss caused by your failure to safeguard backups, disclosure of an API Key or account credential, loss of a device, or another person's access to app data, we will handle liability under the applicable rules to the extent permitted by law. Nothing in this section excludes liability that cannot be excluded under applicable law.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>11. 服务与协议变更</h2>
+          <p>我们可能因维护、合规、第三方服务调整或产品规划变更、暂停或终止部分功能，并可能根据功能、服务或法规变化相应更新本协议。变更会在应用内或站外页面公布新的更新日期和生效日期。若你不同意更新后的协议，应停止使用受影响的功能；在法律允许的范围内，继续使用即视为接受更新。</p>
+        </div>
+        <div class="lang-en">
+          <h2>11. Service and agreement changes</h2>
+          <p>We may change, suspend, or discontinue some features for maintenance, compliance, third-party service changes, or product planning, and may update these terms as features, services, or regulations change. Changes will be published with a new last-updated date and effective date in the App or on the policy website. If you do not agree, stop using the affected features; to the extent permitted by law, continued use means you accept the update.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lang-zh">
+          <h2>12. 联系我们</h2>
+          <p>如对本协议、数据或充值有疑问，可发送邮件至 <strong>yehaha@petalmail.com</strong>。我们会在合理期限内回复。</p>
+          <p><strong>更新日期：</strong>2026年10月26日</p>
+          <p><strong>生效日期：</strong>2026年10月26日</p>
+        </div>
+        <div class="lang-en">
+          <h2>12. Contact</h2>
+          <p>For questions about these terms, data, or purchases, email <strong>yehaha@petalmail.com</strong>. We will respond within a reasonable period.</p>
+          <p><strong>Last updated:</strong> October 26, 2026</p>
+          <p><strong>Effective date:</strong> October 26, 2026</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="lang-zh">
+        <p>&copy; 2026 嘟嘎记账团队。保留所有权利。</p>
+        <p><a href="index.html">查看隐私政策</a></p>
+      </div>
+      <div class="lang-en">
+        <p>&copy; 2026 DugaLedger Team. All rights reserved.</p>
+        <p><a href="index.html">View Privacy Policy</a></p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function updateLanguageLinks(isEnglish) {
+      document.querySelectorAll('a[href]').forEach((link) => {
+        const rawHref = link.getAttribute('href');
+        if (!rawHref || rawHref.startsWith('#') || rawHref.startsWith('mailto:')) return;
+        const url = new URL(rawHref, window.location.href);
+        if (!url.pathname.endsWith('/index.html') && !url.pathname.endsWith('/terms.html')) return;
+        if (isEnglish) {
+          url.searchParams.set('lang', 'en');
+        } else {
+          url.searchParams.delete('lang');
+        }
+        link.setAttribute('href', url.pathname.split('/').pop() + url.search + url.hash);
+      });
+    }
+
+    function switchLanguage(lang, updateUrl = true) {
+      const isEnglish = lang === 'en';
+      document.body.classList.toggle('en', isEnglish);
+      document.documentElement.lang = isEnglish ? 'en' : 'zh-CN';
+      document.getElementById('btn-zh').classList.toggle('active', !isEnglish);
+      document.getElementById('btn-en').classList.toggle('active', isEnglish);
+      document.title = isEnglish ? 'DugaLedger - Terms of Service' : '嘟嘎记账 - 用户协议';
+      updateLanguageLinks(isEnglish);
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        if (isEnglish) {
+          url.searchParams.set('lang', 'en');
+        } else {
+          url.searchParams.delete('lang');
+        }
+        window.history.replaceState(null, '', url);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const lang = new URLSearchParams(window.location.search).get('lang') === 'en'
+        ? 'en'
+        : 'zh';
+      switchLanguage(lang, false);
+    });
+  </script>
+</body>
+</html>
